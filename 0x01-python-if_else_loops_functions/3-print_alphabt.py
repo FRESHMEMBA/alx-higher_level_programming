@@ -4,4 +4,3 @@ for char in range(ord('a'), ord('z') + 1):
         continue
     else:
         print("{}".format(chr(char)), end='')
-

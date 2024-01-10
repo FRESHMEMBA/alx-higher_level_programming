@@ -7,12 +7,10 @@ if __name__ == "__main__":
 
     if len(sys.argv) != 4:
         print(f"Usage: {sys.argv[0]} <a> <operator> <b>")
-        print(1)
-        exit(1)
+        sys.exit(1)
     elif sys.argv[2] not in "+-*/":
         print("Unknown operator. Available operators: +, -, * and /")
-        print(1)
-        exit(1)
+        sys.exit(1)
     else:
         operator = sys.argv[2]
         a, b = int(sys.argv[1]), int(sys.argv[3])
@@ -25,7 +23,6 @@ if __name__ == "__main__":
             result = mul(a, b)
         else:
             result = div(a, b)
-        
+
         print(f"{a} {operator} {b} = {result}")
-        print(0)
-        exit(0)
+        sys.exit(0)

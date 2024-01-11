@@ -25,11 +25,12 @@ listint_t *reverse_list(listint_t *head) {
  * Return: 1 if the list is a palindrome, 0 otherwise.
  */
 int is_palindrome(listint_t **head) {
+	listint_t *slow = *head, *fast = *head;
+	listint_t *second_half, *first_half;
+
 	if (*head == NULL || (*head)->next == NULL) {
 		return (1);
 	}
-
-	listint_t *slow = *head, *fast = * head;
 
 	while (fast != NULL && fast->next != NULL) {
 		fast = fast->next->next;
@@ -37,8 +38,8 @@ int is_palindrome(listint_t **head) {
 	}
 
 	/*reversing the second half of the linked list*/
-	listint_t *second_half = reverse_list(slow);
-	listint_t *first_half = *head;
+	*second_half = reverse_list(slow);
+	*first_half = *head;
 
 	while (second_half != NULL) {
 		if (first_half->n != second_half->n) {
@@ -51,5 +52,3 @@ int is_palindrome(listint_t **head) {
 
 	return (1);
 }
-
-

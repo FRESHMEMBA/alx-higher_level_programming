@@ -38,8 +38,8 @@ int is_palindrome(listint_t **head) {
 	}
 
 	/*reversing the second half of the linked list*/
-	*second_half = reverse_list(slow);
-	*first_half = *head;
+	second_half = reverse_list(slow);
+	first_half = *head;
 
 	while (second_half != NULL) {
 		if (first_half->n != second_half->n) {

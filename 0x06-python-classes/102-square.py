@@ -33,12 +33,12 @@ class Square:
             ValueError: If size is less than 0.
         """
         self.__size = size
-    
+
     @property
     def size(self):
         """Getter method for the size attribute."""
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """Setter method for the size attribute."""
@@ -61,28 +61,28 @@ class Square:
         """
         """
         return self.area() == other.area()
-    
+
     def __ne__(self, other):
         """
         """
         return self.area() != other.area()
-    
+
     def __gt__(self, other):
         """
         """
         return self.area() > other.area()
-    
+
     def __ge__(self, other):
         """
         """
         return self.area() >= other.area()
-    
+
     def __lt__(self, other):
         """
         """
         return self.area() < other.area()
-    
+
     def __le__(self, other):
         """
         """
-        return self.area() <= other.area()    
+        return self.area() <= other.area()

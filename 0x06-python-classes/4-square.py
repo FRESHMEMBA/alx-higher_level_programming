@@ -7,6 +7,8 @@ perform operations on squares.
 Classes:
     Square: A class representing a square.
 """
+
+
 class Square:
     """A class representing a square.
 
@@ -31,12 +33,12 @@ class Square:
             ValueError: If size is less than 0.
         """
         self.__size = size
-    
+
     @property
     def size(self):
         """Getter method for the size attribute."""
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         """Setter method for the size attribute."""

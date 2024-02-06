@@ -8,7 +8,8 @@ BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 class Rectangle(BaseGeometry):
     """
-    This class represents a rectangle and inherits from the BaseGeometry class.
+    This class represents a rectangle and
+    inherits from the BaseGeometry class.
 
     Attributes:
         __width (int): The width of the rectangle.
@@ -16,7 +17,7 @@ class Rectangle(BaseGeometry):
 
     Methods:
         __init__(self, width, height): Initializes a new instance of
-            the Rectangle class.
+        the Rectangle class.
     """
     def __init__(self, width, height):
         """

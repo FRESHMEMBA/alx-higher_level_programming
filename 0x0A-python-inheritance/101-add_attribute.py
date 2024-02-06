@@ -14,12 +14,12 @@ def add_attribute(obj, attr_name, attr_value):
     - attr_value: The value of the attribute to be added.
 
     Raises:
-    - TypeError: If the object does not have a '__dict__' attribute, indicating that attributes cannot be added.
+    - TypeError: If the object does not have a '__dict__' attribute,
+      indicating that attributes cannot be added.
 
     Returns:
     - None
     """
     if not hasattr(obj, '__dict__'):
         raise TypeError("can't add new attribute")
-    
     obj.__dict__[attr_name] = attr_value

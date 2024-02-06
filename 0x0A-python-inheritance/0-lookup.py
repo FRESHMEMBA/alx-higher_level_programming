@@ -1,4 +1,4 @@
-#!/user/bin/python3
+#!/usr/bin/python3
 """
 Defines a funtion that returns a list of available
 attributes and methods of an object.

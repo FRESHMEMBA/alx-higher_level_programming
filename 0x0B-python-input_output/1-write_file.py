@@ -20,5 +20,5 @@ def write_file(filename="", text=""):
     - PermissionError: If the user does not have permission
         to write to the file.
     """
-    with open(filename, 'w', unicode="utf-8") as file:
+    with open(filename, 'w', encoding="utf-8") as file:
         return file.write(text)

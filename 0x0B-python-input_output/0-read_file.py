@@ -19,6 +19,5 @@ def read_file(filename=""):
     Raises:
     - FileNotFoundError: If the specified file does not exist.
     """
-    with open(filename, encoding="utf-8") as file:
-        content = file.read()
-        print(content)
+    with open(filename, 'r', encoding="utf-8") as file:
+        print(file.read(), end='')

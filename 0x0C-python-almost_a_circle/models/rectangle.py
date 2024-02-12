@@ -4,7 +4,8 @@ defines a class called Rectangle
 """
 
 
-Base = __import__("base").Base
+# Base = __import__("models.base").Base
+from models.base import Base
 
 class Rectangle(Base):
     """
@@ -33,7 +34,7 @@ class Rectangle(Base):
         Setter method for the width attribute
         """
         if type(value) != int:
-            raise TypeError("widht must be an integer")
+            raise TypeError("width must be an integer")
         elif value <= 0:
             raise ValueError("width must be > 0")
         else:

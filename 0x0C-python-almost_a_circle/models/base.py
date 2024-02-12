@@ -15,8 +15,9 @@ class Base:
         """
         constructor for the Base class.
         """
+        # self.__nb_objects = 0
         if id != None:
             self.id = id
         else:
-            self.__nb_objects += 1
-            self.id = self.__nb_objects
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects

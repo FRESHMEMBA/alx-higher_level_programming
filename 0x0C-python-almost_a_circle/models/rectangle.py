@@ -4,7 +4,7 @@ defines a class called Rectangle
 """
 
 
-import Base
+Base = __import__("base").Base
 
 class Rectangle(Base):
     """
@@ -14,7 +14,7 @@ class Rectangle(Base):
         """
         Constructor for the Rectangle class"
         """
-        self.super(id)
+        super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
@@ -75,11 +75,11 @@ class Rectangle(Base):
             self.__x = value
 
     @property
-    def y(self)
-    """
-    Getter method for the y attribute
-    """
-    return self.__y
+    def y(self):
+        """
+        Getter method for the y attribute
+        """
+        return self.__y
 
     @y.setter
     def y(self, value):
@@ -107,4 +107,6 @@ class Rectangle(Base):
             print('#' * self.__width)
 
     def __str__(self):
+        """
+        """
         return f"[Rectangle] ({self.__id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"

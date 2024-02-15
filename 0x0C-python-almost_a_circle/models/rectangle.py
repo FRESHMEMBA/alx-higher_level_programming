@@ -4,7 +4,7 @@ defines a class called Rectangle
 """
 
 
-# Base = __import__("models.base").Base
+# Base = __import__("base").Base
 from models.base import Base
 
 
@@ -17,6 +17,27 @@ class Rectangle(Base):
         Constructor for the Rectangle class"
         """
         super().__init__(id)
+
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        elif width <= 0:
+            raise ValueError("width must be > 0")
+
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        elif height <= 0:
+            raise ValueError("height must be > 0")
+
+        if not isinstance(x, int):
+            raise TypeError("x must be an integer")
+        elif x < 0:
+            raise ValueError("x must be >= 0")
+
+        if not isinstance(y, int):
+            raise TypeError("y must be an integer")
+        elif y < 0:
+            raise ValueError("y must be >= 0")
+
         self.__width = width
         self.__height = height
         self.__x = x
@@ -34,7 +55,7 @@ class Rectangle(Base):
         """
         Setter method for the width attribute
         """
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value <= 0:
             raise ValueError("width must be > 0")
@@ -50,7 +71,10 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        if type(value) is not int:
+        """
+        Setter method for the height attribute
+        """
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
         elif value <= 0:
             raise ValueError("height must be > 0")
@@ -69,7 +93,7 @@ class Rectangle(Base):
         """
         Setter method for the x attribute
         """
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("x must be an integer")
         elif value < 0:
             raise ValueError("x must be >= 0")
@@ -88,7 +112,7 @@ class Rectangle(Base):
         """
         Setter method for the y attribute
         """
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("y must be an integer")
         elif value < 0:
             raise ValueError("y must be >= 0")
@@ -112,7 +136,7 @@ class Rectangle(Base):
         """
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
-            self.__id,
+            self.id,
             self.__x,
             self.__y,
             self.__width,

@@ -129,8 +129,9 @@ class Rectangle(Base):
         """
         Displays a rectangle on the screen
         """
+        print('\n' * self.__x)
         for h in range(1, self.__height + 1):
-            print('#' * self.__width)
+            print(' ' * self.__y +'#' * self.__width)
 
     def __str__(self):
         """

@@ -7,6 +7,7 @@ defines a class called Rectangle
 # Base = __import__("models.base").Base
 from models.base import Base
 
+
 class Rectangle(Base):
     """
     Rectangle class
@@ -110,4 +111,10 @@ class Rectangle(Base):
     def __str__(self):
         """
         """
-        return f"[Rectangle] ({self.__id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.__id,
+            self.__x,
+            self.__y,
+            self.__width,
+            self.__height
+            )

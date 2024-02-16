@@ -135,7 +135,7 @@ class Rectangle(Base):
         # print('\n' * self.__x, end='')
         # for _ in range(1, self.__height + 1):
         #     print(' ' * self.__y + '#' * self.__width)
-      
+
     def update(self, *args, **kwargs):
         """
         Updates the values of the attributes of this object

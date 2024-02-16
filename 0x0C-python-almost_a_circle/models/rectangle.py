@@ -129,9 +129,9 @@ class Rectangle(Base):
         """
         Displays a rectangle on the screen
         """
-        print('\n' * self.__x, end='')
+        print('\n' * self.__y, end='')
         for _ in range(self.__height):
-            print(' ' * self.__y + '#' * self.__width)
+            print(' ' * self.__x + '#' * self.__width)
         # print('\n' * self.__x, end='')
         # for _ in range(1, self.__height + 1):
         #     print(' ' * self.__y + '#' * self.__width)
@@ -176,3 +176,15 @@ class Rectangle(Base):
             self.__width,
             self.__height
             )
+
+    def to_dictionary(self):
+        """
+        
+        """
+        return {
+            'x': self.__x,
+            'y': self.__y,
+            "id": self.id,
+            "height": self.__height,
+            "width": self.__width
+            }

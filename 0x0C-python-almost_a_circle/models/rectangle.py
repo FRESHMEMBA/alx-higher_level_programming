@@ -136,21 +136,35 @@ class Rectangle(Base):
         # for _ in range(1, self.__height + 1):
         #     print(' ' * self.__y + '#' * self.__width)
             
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Updates the values of the attributes of this object
         """
         nargs = len(args)
-        if nargs >= 1:
-            self.id = args[0]
-        if nargs >= 2:
-            self.__width = args[1]
-        if nargs >= 3:
-            self.__height = args[2]
-        if nargs >= 4:
-            self.__x = args[3]
-        if nargs >= 5:
-            self.__y = args[4]
+
+        if nargs != 0:
+            if nargs >= 1:
+                self.id = args[0]
+            if nargs >= 2:
+                self.__width = args[1]
+            if nargs >= 3:
+                self.__height = args[2]
+            if nargs >= 4:
+                self.__x = args[3]
+            if nargs >= 5:
+                self.__y = args[4]
+        elif kwargs is not None:
+            kwargs_keys = kwargs.keys()
+            if "id" in kwargs_keys:
+                self.id = kwargs["id"]
+            if "height" in kwargs_keys:
+                self.__height = kwargs["height"]
+            if "weight" in kwargs_keys:
+                self.__weight = kwargs["weight"]
+            if 'x' in kwargs_keys:
+                self.__x = kwargs['x']
+            if 'y' in kwargs_keys:
+                self.__y = kwargs['y']
 
     def __str__(self):
         """

@@ -131,7 +131,7 @@ class Rectangle(Base):
         """
         print('/n' * self.__x, end='')
         for _ in range(self.__height):
-            print('#' * self.__width)
+            print(' ' * self.__y + '#' * self.__width)
         # print('\n' * self.__x, end='')
         # for _ in range(1, self.__height + 1):
         #     print(' ' * self.__y + '#' * self.__width)

@@ -99,4 +99,3 @@ class Rectangle:
         Overrides the del function
         """
         print("Bye rectangle...")
-        

@@ -81,9 +81,9 @@ class Rectangle:
         Overrides the __str__ magic method
         """
         if self.width == 0 or self.height == 0:
-            return 0
-        for _ in range(self.height):
-            print('#' * self.width)
+            return ""
+        for i in range(self.height):
+            print('#' * self.width, end='' if i == self.height - 1 else '\n')
         return ""
 
     def __repr__(self):
@@ -91,5 +91,5 @@ class Rectangle:
         Overrides the __repr__ magic method
         """
         if self.width == 0 or self.height == 0:
-            return 0
+            return ""
         return f"<3-rectangle.Rectangle object at {hex(id(self))}>"

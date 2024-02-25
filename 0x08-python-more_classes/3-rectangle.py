@@ -75,3 +75,23 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
         return 2 * (self.width + self.height)
+
+    def __str__(self):
+        """
+        Overrides the __str__ magic method
+        """
+        if self.width == 0 or self.height == 0:
+            return 0
+        for _ in range(self.height):
+            print('#' * self.width)
+        return ""
+
+    def __repr__(self):
+        """
+        Overrides the __repr__ magic method
+        """
+        if self.width == 0 or self.height == 0:
+            return 0
+        for _ in range(self.height):
+            print('#' * self.width)
+        return ""

@@ -128,6 +128,4 @@ class Rectangle:
         """
         A square is a rectangle
         """
-        cls.width = size
-        cls.height = size
-        return cls
+        return cls(size, size)

@@ -30,7 +30,7 @@ class Rectangle:
         Getter method for the width attribute
         """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """

@@ -94,7 +94,7 @@ class Rectangle:
             return ""
         return f"Rectangle({self.width}, {self.height})"
 
-    def __delattr__(self, name):
+    def __delattr__(name):
         """
         Overrides the delattr function
         """

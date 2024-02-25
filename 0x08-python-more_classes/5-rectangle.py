@@ -94,9 +94,9 @@ class Rectangle:
             return ""
         return f"Rectangle({self.width}, {self.height})"
 
-    def __delattr__(name):
+    def __del__(self):
         """
-        Overrides the delattr function
+        Overrides the del function
         """
         print("Bye rectangle...")
-        super().__delattr__(name)
+        

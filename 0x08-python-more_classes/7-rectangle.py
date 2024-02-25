@@ -88,7 +88,7 @@ class Rectangle:
             return ""
         for i in range(self.height):
             print(
-                self.print_symbol * self.width,
+                f"{self.print_symbol} * {self.width}",
                 end='' if i == self.height - 1 else '\n'
             )
         return ""

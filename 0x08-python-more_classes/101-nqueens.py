@@ -6,6 +6,7 @@ N queens puzzle challenge
 
 import sys
 
+
 def is_safe(board, row, col, N):
     """
     Check if it's safe to place a queen at the specified position.
@@ -27,6 +28,7 @@ def is_safe(board, row, col, N):
             return False
     return True
 
+
 def solve_nqueens(board, row, N):
     """
     Recursively solve the N queens problem.
@@ -45,6 +47,7 @@ def solve_nqueens(board, row, N):
             board[row] = col
             solve_nqueens(board, row + 1, N)
 
+
 def print_solution(board):
     """
     Print the solution of the N queens problem.
@@ -56,25 +59,27 @@ def print_solution(board):
         print(f'[{i}, {board[i]}]', end=' ')
     print()
 
+
 def main():
     """
     Main function to handle command line arguments and start solving the problem.
     """
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
-        sys.exit(1)
-    
+        sys.exit(2)
+
     try:
         N = int(sys.argv[1])
         if N < 4:
             print("N must be at least 4")
-            sys.exit(1)
+            sys.exit(2)
     except ValueError:
         print("N must be a number")
-        sys.exit(1)
-    
+        sys.exit(2)
+
     board = [-1] * N
     solve_nqueens(board, 0, N)
+
 
 if __name__ == "__main__":
     main()

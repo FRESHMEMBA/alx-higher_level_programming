@@ -19,7 +19,7 @@ def is_safe(board, row, col, N):
     Returns:
         bool: True if it's safe to place a queen, False otherwise.
     """
-    # Check if there's a queen in the same column or diagonal
+    # Check if there's a queen in the same column
     for i in range(row):
         if board[i] == col or \
            board[i] - i == col - row or \
@@ -37,24 +37,23 @@ def solve_nqueens(board, row, N):
         N (int): The size of the board.
     """
     if row == N:
-        print_solution(board, N)
+        print_solution(board)
         return
-
+    
     for col in range(N):
         if is_safe(board, row, col, N):
             board[row] = col
             solve_nqueens(board, row + 1, N)
 
-def print_solution(board, N):
+def print_solution(board):
     """
     Print the solution of the N queens problem.
 
     Args:
         board (list): The final state of the board.
-        N (int): The size of the board.
     """
-    for row in board:
-        print([row, board[row]])
+    for i in range(len(board)):
+        print(f'[{i}, {board[i]}]', end=' ')
     print()
 
 def main():
@@ -64,7 +63,7 @@ def main():
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
-
+    
     try:
         N = int(sys.argv[1])
         if N < 4:
@@ -73,7 +72,7 @@ def main():
     except ValueError:
         print("N must be a number")
         sys.exit(1)
-
+    
     board = [-1] * N
     solve_nqueens(board, 0, N)
 

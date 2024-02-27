@@ -15,11 +15,8 @@ class TestMaxInteger(unittest.TestCase):
         """
         self.assertIsNone(max_integer([]))
 
-    def test_invalid_input(self):
-        """
-        """
-        # self.assertRaises(TypeError, max_integer(["one", 2]))
-        # self.assertRaises(TypeError, max_integer([1, True]))
+    def test_one_element(self):
+        self.assertEqual(2, max_integer([2]))
 
     def test_max_begining(self):
         """

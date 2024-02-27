@@ -2,6 +2,8 @@
 """
 Defines a class called LockedClass
 """
+
+
 class LockedClass:
     """
     Class LockedClass prevents the user from dynamically creating new instance
@@ -9,8 +11,11 @@ class LockedClass:
     """
     def __setattr__(self, name, value):
         """
-        Overrides the setattr function"""
+        Overrides the setattr function
+        """
         if name == 'first_name':
             self.__dict__[name] = value
         else:
-            raise AttributeError("'LockedClass' object has no attribute '{}'".format(name))    
+            raise AttributeError(
+                "'LockedClass' object has no attribute '{}'".format(name)
+                )  

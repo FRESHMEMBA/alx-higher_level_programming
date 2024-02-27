@@ -1,0 +1,10 @@
+import 5-text_indentation.text_indentation
+"""
+>>> text_indentation("Hello. How are you?")
+Hello.
+
+How are you?
+
+>>> text_indentation(989)
+text must be a string
+"""

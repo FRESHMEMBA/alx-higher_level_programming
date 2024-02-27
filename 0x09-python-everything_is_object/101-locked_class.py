@@ -9,7 +9,7 @@ class LockedClass:
     Class LockedClass prevents the user from dynamically creating new instance
     attributes, except if the new attribute is called first_name
     """
-    __slots__ = ["first_name"]
+    # __slots__ = ["first_name"]
     def __setattr__(self, name, value):
         """
         Overrides the setattr function

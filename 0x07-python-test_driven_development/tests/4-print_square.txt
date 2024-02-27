@@ -1,0 +1,12 @@
+import 4-print_square.print_square
+
+"""
+>>> print_square(4)
+####
+####
+####
+####
+>>> print_square("two")
+size must be an integer
+>>> print_square(-2)
+size must be >= 0

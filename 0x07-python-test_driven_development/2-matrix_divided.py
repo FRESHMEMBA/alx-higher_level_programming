@@ -45,8 +45,8 @@ def matrix_divided(matrix, div):
         matrix_row = []
         for n in row:
             if not isinstance(n, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists)\
-                                of integers/floats")
+                raise TypeError("matrix must be a matrix (list of lists) \
+of integers/floats")
 
             try:
                 matrix_row.append(round(n / div, 2))

@@ -1,0 +1,8 @@
+import 3-say_my_name.say_my_name
+
+>>> say_my_name("Sibonelo", "Mazibuko")
+My name is Sibonelo Mazibuko
+>>> say_my_name(2, "Mbatha")
+first_name must be a string
+>>> say_my_name("Nelo", 7.5)
+last_name must be a string

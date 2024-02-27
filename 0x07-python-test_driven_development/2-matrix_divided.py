@@ -28,7 +28,10 @@ def matrix_divided(matrix, div):
 
     if len(set(map(lambda row: len(row), matrix))) != 1:
         raise TypeError("Each row of the matrix must have the same size")
-    
+
+    if not isinstance(div, (int, float)):
+        raise TypeError("div must be a number")
+
     for row in matrix:
         if not isinstance(row, list):
             raise TypeError(

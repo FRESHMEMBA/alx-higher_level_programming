@@ -21,10 +21,18 @@ class TestMaxInteger(unittest.TestCase):
         # self.assertRaises(TypeError, max_integer(["one", 2]))
         # self.assertRaises(TypeError, max_integer([1, True]))
 
-    def test_valid_input(self):
+    def test_max_begining(self):
         """
         """
-        self.assertEqual(5, max_integer([5]))
+        self.assertEqual(5, max_integer([5, 3, 1, 2]))
+
+    def test_max_middle(self):
+        self.assertEqual(10, max_integer[2, 5, 10, 1, 7])
+
+    def test_max_end(self):
         self.assertEqual(7, max_integer([1, 3, 5, 7]))
+
+    def test_negative_numbers(self):
+        self.assertEqual(-1, max_integer([-4, -3, -2, -1]))
 
     

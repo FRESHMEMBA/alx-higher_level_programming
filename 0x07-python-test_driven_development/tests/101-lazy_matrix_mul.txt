@@ -1,0 +1,8 @@
+import 101-lazy_matrix_mul.lazy_matrix_mul
+
+"""
+>>> m_a = [[1, 2], [3, 4]]
+>>> m_b = [[2, 4], [6, 8]]
+>>> lazy_matrix_mul(m_a, m_b)
+[[14, 20], [30, 44]]
+"""

@@ -22,10 +22,10 @@ def validate_matrix(matrix, arg_name):
     """
     if not isinstance(matrix, list):
         raise TypeError(f"{arg_name} must be a list")
-    if not matrix:
-        raise ValueError(f"{arg_name} can't be empty")
     if not all(isinstance(row, list) for row in matrix):
         raise TypeError(f"{arg_name} must be a list of lists")
+    if matrix == [] or matrix == [[]]:
+        raise ValueError(f"{arg_name} can't be empty")
     if not all(isinstance(elem, (int, float)) for row in matrix for elem in row):
         raise TypeError(f"{arg_name} should contain only integers or floats")
     if len(set(len(row) for row in matrix)) != 1:

@@ -26,5 +26,5 @@ def save_to_json_file(my_obj, filename):
     Example:
     save_to_json_file({"name": "John", "age": 30}, "data.json")
     """
-    with open(filename):
-        json.dump(my_obj, filename)
+    with open(filename) as file:
+        json.dump(my_obj, file)

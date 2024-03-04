@@ -7,7 +7,7 @@ Defines a function that converts an object to its JSON representation
 import json
 
 
-def to_json_string(my_str):
+def from_json_string(my_str):
     """
     Converts an object to its JSON representation.
 

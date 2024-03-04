@@ -7,7 +7,7 @@ Defines a funtion that creates an Object from a JSON file.
 import json
 
 
-def load_from_json(filename):
+def load_from_json_file(filename):
     """
     Loads data from a JSON file and returns it as a Python object.
 

@@ -6,15 +6,24 @@ Script to add all arguments to a Python list and then save them to a JSON file
 
 import sys
 import json
+
 save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
 load_from_json_file = __import__("6-load_from_json_file.py").load_from_json_file
 
 
-# def save_arguments(filename):
-filename = "add_item.json"
-args_list = []
+def main():
+    """Main function to process command-line arguments and save to JSON file."""
+    # Define the filename for the JSON file
+    filename = "add_item.json"
+    args_list = []
 
-for arg in sys.argv[1:]:
-    args_list.append(arg)
+    # Extract command-line arguments and add them to the list
+    for arg in sys.argv[1:]:
+        args_list.append(arg)
 
-save_to_json_file(args_list, filename)
+    # Save the list of arguments to a JSON file
+    save_to_json_file(args_list, filename)
+
+
+if __name__ == "__main__":
+    main()

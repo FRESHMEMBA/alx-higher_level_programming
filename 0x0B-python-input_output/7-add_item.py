@@ -12,7 +12,9 @@ load_from_json_file = __import__("6-load_from_json_file.py").load_from_json_file
 
 
 def main():
-    """Main function to process command-line arguments and save to JSON file."""
+    """Main function to process command-line arguments
+    and save to JSON file
+    """
     # Define the filename for the JSON file
     filename = "add_item.json"
     args_list = []

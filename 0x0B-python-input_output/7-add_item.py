@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-Script to add all command-line arguments to a Python list and
+"""Script to add all command-line arguments to a Python list and
 then save them to a JSON file.
 
 This script takes command-line arguments and stores them in a Python list.
@@ -18,8 +17,8 @@ Dependencies:
 Note:
     Before running this script, ensure that the '5-save_to_json_file.py'
     and '6-load_from_json_file.py' modules are correctly implemented,
-    as they are imported to handle JSON file I/O.
-"""
+    as they are imported to handle JSON file I/O."""
+
 
 import sys
 import json

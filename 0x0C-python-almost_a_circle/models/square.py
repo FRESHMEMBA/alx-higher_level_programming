@@ -137,6 +137,7 @@ class Square(Rectangle):
                 self._Rectangle__x = kwargs['x']
             if 'y' in kwargs_keys:
                 self._Rectangle__y = kwargs['y']
+
     def __str__(self, name="Square"):
         """
         Returns a string representation of the Square object.

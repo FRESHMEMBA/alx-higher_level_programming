@@ -4,7 +4,10 @@ Defines a class named Base.
 This class will be the base class of all other classes in this project.
 """
 
+
 import json
+
+
 class Base:
     """
     Base class for all other classes.
@@ -21,11 +24,11 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """
-        
+        Returns the json represenatation of an object
         """
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"

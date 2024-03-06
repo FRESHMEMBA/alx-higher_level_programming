@@ -57,11 +57,14 @@ def main():
         for line in sys.stdin:
             # Parse the input line
             parts = line.split()
-            if len(parts) < 9:
+            if len(parts) < 10:
                 continue  # Skip invalid lines
 
             status_code = parts[8]
-            file_size = int(parts[9])
+            try:
+                file_size = int(parts[9])
+            except ValueError:
+                continue
 
             # Update total file size and status counts
             total_size += file_size

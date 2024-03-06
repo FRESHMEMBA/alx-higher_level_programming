@@ -20,12 +20,16 @@ class Student:
         """
         Retrieves a dictionary represenatation of a Student instance
         """
+        types = (list, dict, str, int, bool)
         attributes = self.__dict__
         json_dict = {}
 
-        for key, value in attributes.items():
-            if isinstance(value, (list, dict, str, int, bool)):
-                if value in attrs:
+        if attrs is None:
+            for key, value in attributes.items():
+                if isinstance(value, types):
                     json_dict[key] = value
-
+        elif isinstance(attrs, list):
+            for attr in attrs:
+                if attr in attributes and isinstance(attributes[attr], types):
+                    json_dict[attr] = attributes[attr]
         return json_dict

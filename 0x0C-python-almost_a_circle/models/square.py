@@ -143,7 +143,7 @@ class Square(Rectangle):
         Returns a string representation of the Square object.
 
         Returns:
-            str: A string containing the following information about the Square:
+            str: A string containing the following info about the Square:
                 - The id of the Square.
                 - The x-coordinate of the Square's position.
                 - The y-coordinate of the Square's position.

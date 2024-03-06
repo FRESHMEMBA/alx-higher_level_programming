@@ -111,7 +111,7 @@ class Base:
             with open(filename, "r") as file:
                 lines = file.readlines()
         except FileNotFoundError:
-            return []  # Return an empty list if the file doesn't exist
+            return []
 
         instances = []
         for line in lines:

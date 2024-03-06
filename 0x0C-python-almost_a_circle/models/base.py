@@ -85,3 +85,51 @@ class Base:
 
         list_dicts = cls.from_json_string(json_data)
         return [cls.create(**dictionary) for dictionary in list_dicts]
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Serializes objects to a CSV file.
+        """
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w") as file:
+            for obj in list_objs:
+                if cls.__name__ == "Rectangle":
+                    file.write(
+                        f"{obj.id},{obj.width},{obj.height},{obj.x},{obj.y}\n"
+                        )
+                elif cls.__name__ == "Square":
+                    file.write(f"{obj.id},{obj.size},{obj.x},{obj.y}\n")
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Deserializes objects from a CSV file.
+        """
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r") as file:
+                lines = file.readlines()
+        except FileNotFoundError:
+            return []  # Return an empty list if the file doesn't exist
+
+        instances = []
+        for line in lines:
+            attrs = line.strip().split(",")
+            if cls.__name__ == "Rectangle":
+                instance = cls(
+                    int(attrs[0]),
+                    int(attrs[1]),
+                    int(attrs[2]),
+                    int(attrs[3]),
+                    int(attrs[4])
+                    )
+            elif cls.__name__ == "Square":
+                instance = cls(
+                    int(attrs[0]),
+                    int(attrs[1]),
+                    int(attrs[2]),
+                    int(attrs[3])
+                    )
+            instances.append(instance)
+        return instances

@@ -109,7 +109,7 @@ class Square(Rectangle):
     #     print('\n' * self._Rectangle__x, end='')
     #     for _ in range(self._Rectangle__height):
     #         print(' ' * self._Rectangle__y + '#' * self._Rectangle__width)
-            
+
     def update(self, *args, **kwargs):
         """
         Updates the values of the attributes of this object
@@ -140,6 +140,14 @@ class Square(Rectangle):
 
     def __str__(self):
         """
+        Returns a string representation of the Square object.
+
+        Returns:
+            str: A string containing the following information about the Square:
+                - The id of the Square.
+                - The x-coordinate of the Square's position.
+                - The y-coordinate of the Square's position.
+                - The width of the Square.
         """
         return "[Sqaure] ({}) {}/{} - {}".format(
             self.id,
@@ -150,7 +158,14 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """
-        
+        Returns a dictionary representation of the Square object.
+
+        Returns:
+            dict: A dictionary containing the attributes of the Square object.
+                - "id" (int): The id of the Square.
+                - "x" (int): The x-coordinate of the Square's position.
+                - "size" (int): The size of the Square.
+                - "y" (int): The y-coordinate of the Square's position.
         """
         return {
             "id": self.id,

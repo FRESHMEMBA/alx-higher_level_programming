@@ -1,4 +1,4 @@
-#!/usr/bin/pyrhon3
+#!/usr/bin/python3
 """
 Defines a funtion that appends a line of text after
 a specific line in the file

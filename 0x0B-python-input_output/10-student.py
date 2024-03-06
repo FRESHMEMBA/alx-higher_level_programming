@@ -25,6 +25,7 @@ class Student:
 
         for key, value in attributes.items():
             if isinstance(value, (list, dict, str, int, bool)):
-                json_dict[key] = value
+                if value in attrs:
+                    json_dict[key] = value
 
         return json_dict

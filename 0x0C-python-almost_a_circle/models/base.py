@@ -6,6 +6,7 @@ This class will be the base class of all other classes in this project.
 
 
 import json
+import turtle
 
 
 class Base:
@@ -133,3 +134,44 @@ class Base:
                     )
             instances.append(instance)
         return instances
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        Draws all the Rectangles and Squares using Turtle graphics module.
+        """
+        # Initialize turtle screen
+        screen = turtle.Screen()
+        screen.setup(width=800, height=600)
+        screen.bgcolor("white")
+        screen.title("Rectangles and Squares")
+
+        # Create turtle object
+        pen = turtle.Turtle()
+
+        # Draw rectangles
+        pen.color("blue")
+        pen.penup()
+        for rectangle in list_rectangles:
+            pen.goto(rectangle.x, rectangle.y)
+            pen.pendown()
+            for _ in range(2):
+                pen.forward(rectangle.width)
+                pen.left(90)
+                pen.forward(rectangle.height)
+                pen.left(90)
+            pen.penup()
+
+        # Draw squares
+        pen.color("red")
+        pen.penup()
+        for square in list_squares:
+            pen.goto(square.x, square.y)
+            pen.pendown()
+            for _ in range(4):
+                pen.forward(square.size)
+                pen.left(90)
+            pen.penup()
+
+        # Close screen when clicked
+        screen.exitonclick()

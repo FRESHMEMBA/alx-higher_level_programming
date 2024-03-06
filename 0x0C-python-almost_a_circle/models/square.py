@@ -137,8 +137,7 @@ class Square(Rectangle):
                 self._Rectangle__x = kwargs['x']
             if 'y' in kwargs_keys:
                 self._Rectangle__y = kwargs['y']
-
-    def __str__(self):
+    def __str__(self, name="Square"):
         """
         Returns a string representation of the Square object.
 
@@ -149,7 +148,7 @@ class Square(Rectangle):
                 - The y-coordinate of the Square's position.
                 - The width of the Square.
         """
-        return "[Sqaure] ({}) {}/{} - {}".format(
+        return "[{name}] ({}) {}/{} - {}".format(
             self.id,
             self._Rectangle__x,
             self._Rectangle__y,

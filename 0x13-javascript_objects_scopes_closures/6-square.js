@@ -6,7 +6,7 @@ class Square extends SquareB {
     super(size, size);
   }
 
-  charPrint(c) {
+  charPrint (c) {
     if (typeof c === 'undefined') {
       this.print();
     } else {

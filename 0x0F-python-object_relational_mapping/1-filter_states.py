@@ -8,7 +8,7 @@ import sys
 import MySQLdb
 
 
-def filter_states(username, passowrd, database):
+def filter_states(username, password, database):
     """
     Filters all states with a name staring with N from a database
     """
@@ -16,7 +16,7 @@ def filter_states(username, passowrd, database):
         host="localhost",
         port=3306,
         user=username,
-        passwd=passowrd,
+        passwd=password,
         db=database
     )
 
@@ -32,5 +32,7 @@ def filter_states(username, passowrd, database):
 
 
 if __name__ == "__main__":
-    username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
+    username  = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
     filter_states(username, password, database)

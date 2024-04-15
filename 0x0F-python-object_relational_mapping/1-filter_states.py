@@ -32,3 +32,8 @@ def filter_states(username, passowrd, database):
         print(row)
     cursor.close()
     conn.close()
+
+
+if __name__ == "__main__":
+    username, password, database = sys.argv[0], sys.argv[1], sys.argv[2]
+    filter_states(username, password, database)

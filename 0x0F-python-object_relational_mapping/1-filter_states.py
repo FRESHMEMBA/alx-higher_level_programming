@@ -22,10 +22,7 @@ def filter_states(username, passowrd, database):
 
     cursor = conn.cursor()
     cursor.execute(
-        "SELECT states \
-        FROM * \
-        WHERE name LIKE 'N%' \
-        ORDER BY id ASC"
+        "SELECT states FROM * WHERE name LIKE 'N%' ORDER BY id ASC"
         )
     rows = cursor.fetchall()
     for row in rows:

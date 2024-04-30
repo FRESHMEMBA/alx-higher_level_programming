@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 """
 Defines a function that finds a peak in a list of integers
 """

@@ -1,3 +1,3 @@
 #!/bin/bash
 # Takes in a URL, sends a GET request to that URL
-curl -s "http://$1"
+curl -s -L "http://$1"

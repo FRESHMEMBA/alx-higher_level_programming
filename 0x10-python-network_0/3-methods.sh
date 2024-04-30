@@ -1,3 +1,3 @@
 #!/bin/bash
-# Takes in a URL, sends a GET request to that URL
-curl -s -X "http://$1"
+# Takes in a URL, and displays all the HTTP methods the server will accept
+curl -s -X OPTIONS "http://$1"

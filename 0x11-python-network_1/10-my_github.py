@@ -24,7 +24,7 @@ if __name__ == "__main__":
             password=password
             )
         )
-    
+
     if response.status_code == 200:
         print(response.json().get("id"))
     else:

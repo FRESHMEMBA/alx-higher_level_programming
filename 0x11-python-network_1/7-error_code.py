@@ -18,4 +18,5 @@ if __name__ == "__main__":
         print(f"{response.text}")
 
     except requests.HTTPError as e:
-        print(f"Error code: {e.code}")
+        if e.code >= 400:
+            print(f"Error code: {e.code}")

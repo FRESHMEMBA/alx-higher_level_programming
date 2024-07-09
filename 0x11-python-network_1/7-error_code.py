@@ -15,8 +15,8 @@ if __name__ == "__main__":
 
     try:
         response = requests.get(url=url)
+        response.raise_for_status()
         print(f"{response.text}")
 
     except requests.HTTPError as e:
-        if int(e.code) >= 400:
-            print(f"Error code: {e.code}")
+        print(f"Error code: {e.response.status_code}")

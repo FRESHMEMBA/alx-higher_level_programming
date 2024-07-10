@@ -25,7 +25,8 @@ if __name__ == "__main__":
 
         if isinstance(response_json, dict) and response_json:
             print(f"[{response_json['id']}] {response_json['name']}")
-        elif isinstance(response_json, list) and not response_json:
+        # elif isinstance(response_json, list) and not response_json:
+        elif len(sys.argv) == 1:
             print("No result")
         else:
             print("Not a valid JSON")

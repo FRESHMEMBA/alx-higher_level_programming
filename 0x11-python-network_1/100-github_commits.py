@@ -14,7 +14,7 @@ if __name__ == "__main__":
     url = f"https://api.github.com/repos/{owner_name}/{repo_name}/commits"
 
     response = requests.get(url)
-    
+
     if response.status_code == 200:
         commits = response.json()[:10]  # Get the 10 most recent commits
         for commit in commits:

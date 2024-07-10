@@ -23,4 +23,4 @@ if __name__ == "__main__":
     response = requests.post(url=url, data=data)
 
     # print the body response
-    print(f"Your email is: {response.text}")
+    print(f"{response.text}")
